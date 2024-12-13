@@ -23,11 +23,13 @@ const RestaurantMenu = ()=>{
     // }
     if(resInfo===null) return <Shimmer/>;
     const {name,avgRating,costForTwoMessage,cuisines,locality,sla}=resInfo?.cards[2]?.card?.card?.info
-    console.log(resInfo)
+    console.log("resinfo",resInfo)
     const{itemCards} = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card?.card
+
+    console.log("hdffuhgf",itemCards);
     
     return (
-        <div className="menu bg-orange-300">
+        <div className="menu text-center">
             <h1 className="font-bold">{name}</h1>
             <h2>{avgRating} - {costForTwoMessage}</h2>
             <h3>{cuisines}</h3>
